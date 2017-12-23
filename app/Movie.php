@@ -10,7 +10,7 @@ class Movie extends Model
 	protected $guarded = ['id'];
 
 	public static function getAllMovies(){
-		return self::get();
+		return self::orderBy('created_at', 'DESC')->get();
 	}
 
 	public static function getSingleMovie($id){

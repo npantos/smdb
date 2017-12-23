@@ -10,7 +10,8 @@ class MoviesController extends Controller
 {
 	protected function index(){
 		$movies = Movie::getAllMovies();
-		return view('movies.index',compact("movies"));
+		$last_movies = Movie::getAllMovies()->take(5);
+		return view('movies.index',compact("movies",'last_movies'));
 	}
 
 	protected function show($id){
