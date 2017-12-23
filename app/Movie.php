@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Movie extends Model
 {
 	protected $guarded = ['id'];
@@ -13,7 +14,11 @@ class Movie extends Model
 	}
 
 	public static function getSingleMovie($id){
-		return self::find($id);
+		return self::with('comments')->find($id);
+	}
+
+	public function comments(){
+		return $this->hasMany(Comment::class)->orderBy('created_at', 'DESC');
 	}
 
 }

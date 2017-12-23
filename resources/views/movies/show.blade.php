@@ -21,7 +21,44 @@
         <p>&nbsp;</p>
         <p>{{$movies->storyline}}</p>
     </div>
-<div>
+
+
+
+    <form method="POST" action="{{ route('comments') }}">
+
+        {{ csrf_field() }}
+
+        <div class="form-group">
+            <label for="body">Comments</label>
+            <textarea class="form-control" id="comment" name="comment"></textarea>
+            @if($errors->has('comment'))
+                @foreach($errors->get('comment') as $error)
+                    <div class="alert alert-dismissible alert-danger mt-3">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        {{ $error }}
+                    </div>
+                @endforeach
+            @endif
+        </div>
+        <input type="hidden" name="movie_id" value="{{$movies->id}}">
+
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+
+    </form>
+    @foreach ($movies->comments as $comment)
+
+        <div class="card border-dark mb-3">
+            <div class="card-header">{{$comment->created_at}}</div>
+            <div class="card-body">
+                <p class="card-text">{{$comment->comment}}</p>
+            </div>
+        </div>
+
+    @endforeach
 
 @endsection
 
