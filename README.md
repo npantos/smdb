@@ -1,4 +1,4 @@
-# smdb
+# SMDb - Serbian Movie Data Base
 
 ### Opis zadatka	
 
