@@ -30,7 +30,7 @@ class MoviesController extends Controller
 			'title' => 'required',
 			'director' => 'required',
 			'genre' => 'required',
-			'year' => 'digits:4|integer|min:1900|max:'.(date('Y')+1),
+			'year' => 'nullable|digits:4|integer|min:1900|max:'.(date('Y')+1),
 			'storyline' =>'max:1000'
 		]);
 
