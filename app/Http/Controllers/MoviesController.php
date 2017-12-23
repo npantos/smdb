@@ -18,4 +18,24 @@ class MoviesController extends Controller
 
 		return view('movies.show',compact("movies"));
 	}
+
+	protected function create(){
+
+		return view('movies.create');
+	}
+
+	protected function store(Request $request){
+
+		$this->validate(request(),[
+			'title' => 'required',
+			'director' => 'required',
+			'genre' => 'required',
+			'year' => 'required',
+			'storyline' =>'required'
+		]);
+
+
+		Movie::create($request->all());
+		return $this->index();
+	}
 }

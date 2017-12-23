@@ -12,9 +12,9 @@
         <div class="row">
             <div class="col-6"><img src="/images/movie-dummy.jpeg" alt="" class="img-fluid"></div>
             <div class="col-6">
-                <p>Director: {{$movies->director}}</p>
-                <p>Genre: {{$movies->genre}}</p>
-                <p>Year: {{$movies->year}}</p>
+                <h4>Director: {{$movies->director}}</h4>
+                <h4>Genre: {{$movies->genre}}</h4>
+                <h4>Year: {{$movies->year}}</h4>
             </div>
         </div>
 
