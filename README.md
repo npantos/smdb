@@ -1,6 +1,6 @@
 # smdb
 
-Opis zadatka	
+### Opis zadatka	
 
 Potrebno napraviti aplikaciju u laravelu po ugledu na IMDB (internet movie database)
 Aplikacija treba da sadrži sledeće stranice
@@ -17,14 +17,14 @@ Forma za kreiranje novog filma sa validacijom
 Genre page
 klik na zanr na single movie page-u otvara novu (genre) stranicu gde se listaju samo filmovi tog žanra (html isti kao na home page-u)
 
-Zadatak 1
+### Zadatak 1
 
 Napraviti laravel projekat ‘movies’
 Izvršiti sve potrebne instalacione korake
 Kreirati bazu podataka i postaviti odgovarajući .env fajl
 Komitovati projekat na github na novi git repository
 
-Zadatak 2
+### Zadatak 2
 
 Uz pomoc migracija napraviti tabelu ‘movies’
 Izgenerisati migracije koristeci 'php artisan' komandu
@@ -33,7 +33,7 @@ Izvršiti migracije
 Ručno postaviti inicijalne podatke u ovu tabelu
 Komitovati urađeno
 
-Zadatak 3
+### Zadatak 3
 
 Napraviti model Movie
 Napraviti kontroler ‘MoviesController’ pomocu artisan komande
@@ -44,7 +44,7 @@ Prikazati title i kratak teaser (storyline) za svaki film
 Klik na title vodi na single movie page
 Komitovati urađeno
 
-Zadatak 4
+### Zadatak 4
 
 Ukljuciti bootstrap biblioteku u projekat
 Postaviti layout sa navbarom i ukljuciti ga na sve stranice
@@ -52,7 +52,7 @@ U layout postaviti linkove Movies (“/movies”) i Add move (“/add”)
 Komitovati urađeno
 
 
-Zadatak 5
+### Zadatak 5
 
 Implementacija single movie stranice
 Dodati rutu “/movies/:id” koja će izvršavati akciju show unutar ‘MoviesController’
@@ -61,7 +61,7 @@ Kreirati view fajl i ispisati u njemu podatke o fimlu
 Title, žanr (genre), ime režisera (director), godinu kada je snimljen i ceo storyline (zaplet)
 Komitovati urađeno
 
-Zadatak 6
+### Zadatak 6
 
 Implementirati formu za kreiranje novog filma sa validacijom
 Dodati rutu “/create” koja će izvršavati akciju create unutar ‘MoviesController’
@@ -69,7 +69,7 @@ Unutar akcije postaviti prikaz forme kroz view fajl
 Komitovati urađeno
 Podsetnik: https://laravel.com/docs/5.5/validation
 
-Zadatak 7
+### Zadatak 7
 
 Implementirati formu za kreiranje novog filma sa validacijom
 Dodati rutu “/create” (POST) koja će izvršavati akciju store unutar ‘MoviesController’
@@ -81,7 +81,7 @@ godinu kada je snimljen - ako je parametar prosleđen, mora biti broj izmedju 19
 storyline - maksimum 1000 karaktera
 Komitovati urađeno
 
-Zadatak 8
+### Zadatak 8
 
 Uz pomoc migracija napraviti tabelu ‘comments’
 Izgenerisati migracije koristeci 'php artisan' komandu
@@ -92,7 +92,7 @@ Ručno postaviti inicijalne podatke u ovu tabelu
 Komitovati urađeno
 Podsetnik: https://laravel.com/docs/5.5/eloquent-relationships
 
-Zadatak 9
+### Zadatak 9
 
 Na stranici filma, ispod storyline-a ispisati komentare na film (tekst komentara i vreme kada je komentar ostavljen)
 Dodati Comment model klasu
@@ -101,7 +101,7 @@ Prikazati komentare u view fajlu
 Komitovati urađeno
 
 
-Zadatak 10
+### Zadatak 10
 
 Ispod postojecih komentara dodati form-u za ostavljanje komentara sa validacijom
 Preko artisan komande izgenerisati CommentsController
@@ -121,7 +121,7 @@ Iskoristiti view fajl MoviesController::index akcije za prikaz filmova
 Komitovati urađeno
 
 
-Zadatak 12
+### Zadatak 12
 
 Na home i na genres stranicama dodati sidebar
 U sidebaru prikazati poslednjih 5 filmova (samo title) koje smo uneli u bazu (linkuju na single movie page)
