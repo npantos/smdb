@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Movie;
-
+use App\Comment;
 
 class MoviesController extends Controller
 {
@@ -27,13 +27,8 @@ class MoviesController extends Controller
 
 	protected function store(Request $request){
 
-		$this->validate(request(),[
-			'title' => 'required',
-			'director' => 'required',
-			'genre' => 'required',
-			'year' => 'nullable|digits:4|integer|min:1900|max:'.(date('Y')+1),
-			'storyline' =>'max:1000'
-		]);
+		// U Comment modelu se definiše statički properties $validation da se ne stavlja validacija za svaki store
+		$this->validate(request(),Comment::$validation);
 
 
 		Movie::create($request->all());

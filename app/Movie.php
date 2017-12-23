@@ -9,7 +9,7 @@ class Movie extends Model
 {
 	protected $guarded = ['id'];
 
-	public static function getAllMovies(){
+		public static function getAllMovies(){
 		return self::orderBy('created_at', 'DESC')->get();
 	}
 
@@ -20,5 +20,6 @@ class Movie extends Model
 	public function comments(){
 		return $this->hasMany(Comment::class)->orderBy('created_at', 'DESC');
 	}
+
 
 }

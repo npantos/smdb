@@ -31,14 +31,7 @@
         <div class="form-group">
             <label for="body">Comments</label>
             <textarea class="form-control" id="comment" name="comment"></textarea>
-            @if($errors->has('comment'))
-                @foreach($errors->get('comment') as $error)
-                    <div class="alert alert-dismissible alert-danger mt-3">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        {{ $error }}
-                    </div>
-                @endforeach
-            @endif
+
         </div>
         <input type="hidden" name="movie_id" value="{{$movies->id}}">
 

@@ -13,67 +13,32 @@
 
         <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" class="form-control" id="title" name="title"/>
-            @if($errors->has('title'))
-                @foreach($errors->get('title') as $error)
-                    <div class="alert alert-dismissible alert-danger mt-3">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        {{ $error }}
-                    </div>
-                @endforeach
-            @endif
+            <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}" />
+            @include('partials.error', ['key' => 'title'])
         </div>
 
         <div class="form-group">
-            <label for="title">Year</label>
-            <input type="text" class="form-control" id="year" name="year"/>
-            @if($errors->has('year'))
-                @foreach($errors->get('year') as $error)
-                    <div class="alert alert-dismissible alert-danger mt-3">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        {{ $error }}
-                    </div>
-                @endforeach
-            @endif
+            <label for="year">Year</label>
+            <input type="text" class="form-control" id="year" name="year" value="{{ old('year') }}" />
+            @include('partials.error', ['key' => 'year'])
         </div>
 
         <div class="form-group">
-            <label for="title">Director</label>
-            <input type="text" class="form-control" id="director" name="director"/>
-            @if($errors->has('director'))
-                @foreach($errors->get('director') as $error)
-                    <div class="alert alert-dismissible alert-danger mt-3">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        {{ $error }}
-                    </div>
-                @endforeach
-            @endif
+            <label for="director">Director</label>
+            <input type="text" class="form-control" id="director" name="director" value="{{ old('director') }}" />
+            @include('partials.error', ['key' => 'director'])
         </div>
 
         <div class="form-group">
-            <label for="title">Genre</label>
-            <input type="text" class="form-control" id="genre" name="genre"/>
-            @if($errors->has('genre'))
-                @foreach($errors->get('genre') as $error)
-                    <div class="alert alert-dismissible alert-danger mt-3">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        {{ $error }}
-                    </div>
-                @endforeach
-            @endif
+            <label for="genre">Genre</label>
+            <input type="text" class="form-control" id="genre" name="genre" value="{{ old('genre') }}" />
+            @include('partials.error', ['key' => 'genre'])
         </div>
 
         <div class="form-group">
-            <label for="body">Storyline</label>
-            <textarea class="form-control" id="storyline" name="storyline"></textarea>
-            @if($errors->has('storyline'))
-                @foreach($errors->get('storyline') as $error)
-                <div class="alert alert-dismissible alert-danger mt-3">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    {{ $error }}
-                </div>
-                @endforeach
-            @endif
+            <label for="storyline">Storyline</label>
+            <textarea class="form-control" id="storyline" name="storyline">{{ old('storyline') }}</textarea>
+            @include('partials.error', ['key' => 'storyline'])
         </div>
 
         <div class="form-group">
