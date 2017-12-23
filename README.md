@@ -111,7 +111,8 @@ Radi validaciju (content i movie_id moraju biti postalvjeni)
 Redirektuje na stranicu filma i prikazuje error poruku u slučaju da komentar nije validan
 Dodaje komentar u bazu za određeni film u slučaju da je komentar validan i redirektuje na stranicu filma
 Komitovati urađeno
-Zadatak 11
+
+### Zadatak 11
 
 Klik na žanr na single movie stranici otvara novu stranicu gde se listaju samo filmovi tog žanra (html isti kao na home page-u)
 Dodati kontroler GenresController
